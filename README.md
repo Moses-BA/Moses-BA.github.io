@@ -1,20 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Delay the execution of the script by 5 seconds
-  setTimeout(function() {
-    // Fetch user data from sessionStorage
-    const buyerData = sessionStorage.getItem('buyer');
+select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 
-    if (buyerData) {
-      // Parse the buyer object
-      const buyer = JSON.parse(buyerData);
-
-      // Update the HTML elements with user details
-      document.getElementById('userName').textContent = buyer.username; 
-      document.getElementById('userEmail').textContent = "not available"; 
-    } else {
-      console.error('No buyer data found in sessionStorage.');
-      // Optionally, redirect to the login page
-      // window.location.href = "/login";
-    }
-  }, 5000); // 5000 milliseconds = 5 seconds
-});
+  /* Add the following properties */
+  max-height: 100px; /* Set a maximum height for the select element */
+  overflow-y: auto; /* Add a vertical scrollbar if the content exceeds the max-height */
+}
